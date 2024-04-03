@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* div{
+                    background-color:azure;
+                    text-decoration: underline;
+                    text-transform:uppercase; 
+                } */
+
+        #content {
+            background-color: pink;
+        }
+
+        .heading2 {
+            background-color: yellow;
+        }
+
+        .big-text {
+            font-size: 36px;
+        }
+
+        .heading2 .big-text {
+            /* internal check */
+
+            background-color: blue;
+        }
+
+        .heading2.big-text {
+            /* both check */
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- inline style -->
+    <!-- <div style="background-color:azure;
+            text-decoration: underline;
+            text-transform:uppercase;" >Content</div>
+ -->
+    <div id="content">Content</div>
+    <div>Heading1</div>
+    <div id="heading2" class="heading2 big-text">Heading 2</div>
+    <div id="heading3" class="heading2">heading3
+    </div>
+
+    <!-- 
+    headingTwo: camel case
+    heading-two: kebab case
+    heading_two: snake case
+    HeadingTwo: (title) PascalCase
+ -->
+    <div class="parent">
+        <p>paragraph 1</p>
+        <p>paragraph two</p>
+        <p>paragraph 3</p>
+    </div>
+    <span>spanned</span>
+    <p>paragraph 4</p>
+    <p class="align"> para 5 </p><br>
+    <img src="https://th.bing.com/th/id/OIP.Nfd-_b2A1A1D6AsvReUmgAHaEc?rs=1&pid=ImgDetMain" alt="image">
+    <br><br><br>
+
+    <div class="parent">
+        <p>
+            I am a parent
+        </p>
+
+        <p class="child">
+            Im a child.
+        </p>
+
+        <button class="btn">Contact me</button><br>
+
+        <button class="btn btn-small">Contact me</button><br>
+
+    </div>
+
+    <div class="parent-2">
+        <div class="child-2">
+            <ol>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+                <li>item</li>
+            </ol>
+
+        </div>
+    </div>
+
+    <div class="parent-3">
+        <div>
+            <ul>
+                <li>Mob</li>
+                <li>Lap</li>
+                <li>Tab</li>
+                <li>Ch</li>
+                <li>Pine</li>
+            </ul>
+
+            <ol>
+                <li>Mobile</li>
+                <li>Laptop</li>
+                <li>Table</li>
+                <li>Chair</li>
+                <li>Pineapple</li>
+            </ol>
+
+            <ul>
+                <li>Mobile2</li>
+                <br>
+                <li>Laptop2</li>
+                <li>Table2</li>
+                <li>Chair2</li>
+                <li>Pineapple2</li>
+            </ul>
+
+        </div>
+    </div>
+
+    <ul>
+        <li>Mobile2</li>
+        <li>Laptop2</li>
+        <li>Table2</li>
+        <li>Chair2</li>
+        <li>Pineapple2</li>
+    </ul>
+<br><hr><hr><br>
+    <div class="parent-4">
+        <div>
+            <ul>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+                <li>item4</li>
+                <li>item5</li>
+            </ul>
+</div>
+<ul>
+    <li>obj1</li>
+    <li>obj2</li>
+    <li>obj3</li>
+    <li>obj4</li>
+    <li>obj5</li>
+</ul>
+</div>
+<ul>
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+    <li>item5</li>
+</ul>
+<br><hr> 
+<br>
+
+<div class="parent-5">
+<div class="item">login</div>
+<div class="item">loc</div>
+<div class="item search-box">...</div>
+<div class="item cart">cart</div>
+
+</div>
+<br>
+<h2>Flex-end:</h2>
+<div class="parent-6 flex-4">
+<div class="obj">1</div>
+<div class="obj">2</div>
+<div class="obj">3</div>
+<div class="obj">4</div>
+</div>
+<h2>Flex-around:</h2>
+<div class="parent-6 flex-1">
+    <div class="obj">1</div>
+    <div class="obj">2</div>
+    <div class="obj">3</div>
+    <div class="obj">4</div>
+    </div>
+    <h2>Flex-between:</h2>
+    <div class="parent-6 flex-2">
+        <div class="obj">1</div>
+        <div class="obj">2</div>
+        <div class="obj">3</div>
+        <div class="obj">4</div>
+        </div>
+        <h2>Flex-evenly:</h2>
+        <div class="parent-6 flex-3">
+            <div class="obj">1</div>
+            <div class="obj">2</div>
+            <div class="obj">3</div>
+            <div class="obj">4</div>
+            </div>
+</div>
+
+</body>
+
+</html>

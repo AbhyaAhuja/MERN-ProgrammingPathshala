@@ -1,0 +1,225 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+    /* width=border(l&r)+content+padding; */
+}
+
+#content{
+    width:50vw;
+    font-size:40px;
+}
+
+.big-text {
+    padding: 16px;
+    margin: 16px;
+    width: 200px;
+    /* margin: 16px 16px; top&bottom right&left
+margin: 16px 16px 16px; top right&left bottom 
+margin: 16px 16px 16px 16px; top right bottom left */
+
+    /* border: 1px solid black; 
+*/
+
+
+}
+
+/* 
+.parent p{
+    background-color:green ;
+} */
+
+/* .parent {
+    p {
+        background-color: green;
+        width: fit-content;
+    }
+} */
+
+span {
+    background-color: lavenderblush;
+    padding:10px;
+}
+
+.align {
+    margin: auto;
+    width: 60px;
+    background-color: bisque;
+}
+
+/* img {
+    display: block;
+    margin: 0 auto;
+
+    or 
+
+    text-align: center inside a div element
+
+} */
+
+img{
+    width: 500px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+
+
+}
+
+/* .parent{
+    font-size: 40px;
+}
+
+.child{
+    font-size: 20px;
+} */
+
+.parent{
+    font-size: 32px;
+  
+}
+
+.child{
+    font-size: 2em;
+}
+
+/* .btn{
+    display:block;
+    padding: 16px;
+    border-radius: 8px;
+    border:none;
+    font-size:16px;
+    width:120px;
+    margin: 10px auto;
+    cursor:pointer;
+} */
+
+.btn{
+    display:block;
+    padding: 1em;
+    border-radius: 8px;
+    border:none;
+    font-size:16px;
+    width:8rem;
+    margin: 10px auto;
+    cursor:pointer;
+    background-color: lavender;
+}
+
+
+.btn-small{
+
+    width:6em;
+
+}
+
+body{
+    background-color: aquamarine;
+    padding:10px 20px;;
+}
+.parent-2{
+    height:100px;
+    background-color: coral;
+  
+}
+
+.child-2{
+    max-height:100px;
+    padding:16px 32px;
+    background-color: blueviolet;
+    overflow:scroll;
+    width:70%;
+}
+
+.parent-3{
+   padding:10px 26px;
+   width:100vw;
+ol{
+    background-color: palevioletred;
+}
+
+  
+}
+
+.parent-3 ul:first-child{
+    background-color: lightgreen;
+}
+
+.parent-3 ul:last-child{
+    background-color: pink;
+}
+
+.parent-3 ul:last-child li:nth-child(3){
+    /* as it is looking for the 3rd child, second is br third is li */
+    background-color:lavenderblush;
+    width:fit-content;
+}
+
+.parent-3 ul:last-child{
+    li:nth-of-type(4){
+        background-color: blueviolet;
+        width:fit-content;
+    }
+}
+
+.parent-4 ul{
+background-color: bisque;
+}
+
+.parent-4>ul{
+    background-color: burlywood;
+}
+
+.parent-4+ul{
+    background-color: rgb(112, 79, 35);
+}
+
+.parent-5{
+display:flex;
+background-color: cornsilk;
+flex-wrap:wrap;
+}
+.item{
+    background-color:rgb(255, 255, 255);
+    border:1px solid black;
+    /* flex-shrink:0; */
+    flex-basis:40px;
+}
+
+.search-box{
+    flex-grow:3;
+    
+}
+
+.cart{
+    flex-grow:1;
+    flex-shrink:1;
+}
+.parent-6{
+    display:flex;
+    background-color: white;
+    margin:20px 0;
+    
+}
+.obj{
+width:30px;
+flex-basis:100px;
+background-color: #fabbfa;
+border:2px solid black;
+    }
+
+    .flex-1{
+        justify-content:space-around;
+    }
+
+    .flex-2{
+        justify-content:space-between;
+    }
+
+    .flex-3{
+        justify-content:space-evenly;
+    }
+    .flex-4{
+        justify-content:flex-end;
+    }
