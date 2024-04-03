@@ -1,0 +1,229 @@
+<!-- why index? -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MyFirstHTML</title>
+</head>
+
+<body>
+
+    <header>
+       <h2> Header</h2>
+       <hr>
+    </header>
+
+    <main>
+
+        <h2>Blog/main</h2>
+        
+        <h1>My Landing page.</h1>
+        <a href="/contact.html" target="_blank"> contact1 (blank)</a><br>
+        <a href="/home.html" target="_self"> home (self)</a><br>
+        <a href="/contact.html" target="_top"> contact2 (top)</a><br>
+        <a href="/contact.html" target="_parent"> contact3 (parent)</a><br>
+        <br>
+
+        <h1>My First Blog</h1>
+        <h2>My First Blog</h2>
+        <h3>My First Blog</h3>
+        <h4>My First Blog</h4>
+        <h5>My First Blog</h5>
+        <h6>My First Blog</h6>
+        <!-- why is h6 needed? -->
+
+        <p>this is a paragraph</p>
+        <p title="para">
+            Lorem ipsum <strong title="v strong">dolor</strong> sit <b>ehehh</b> amet <i>fhhrkemd</i> consectetur
+            <em>thenks</em>
+            elit. Quis <del>velit</del> <ins>placeat</ins>, deleniti <u><b>eius</b></u> aut quo voluptatum molestiae
+            omnis magni ipsa. Lorem, ipsum dolor &nbsp; sit amet consectetur adipisicing elit. Est cum quae optio. Atque
+            amet aperiam, beatae reiciendis quos porro totam.
+            &lt;hddhbd&gt;
+            <br>
+            <a href="/home">Home (relative link)</a><br>
+            <a href="www.google.com">Google (this wont open, as no https used)</a>
+            <br><a href="https://www.google.com">Google (absolute link), would work</a><br>
+        </p>
+        <p>is p a block elt? yes.</p>
+
+        <h2>Image: </h2>
+        <img src="https://th.bing.com/th/id/R.13820971a962ffbeb63a8fef36185b16?rik=vZ3lu%2blbhy6jxw&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f03%2f10%2f319576-photography-landscape-nature-water-grass-trees-plants-sunrise-lake.jpg&ehk=6WS2p9KknQa9F%2bgAH16n44NReuUyS2rzXah2zy7kiAw%3d&risl=&pid=ImgRaw&r=0"
+            alt="butterfly" width="800px" height="500px">
+
+            <h2>Iframe: </h2>
+        <br><iframe src="https://www.youtube.com" height="500px" width="500px"></iframe><br>
+        <br><iframe src="https://www.flipkart.com" height="500px" width="500px"></iframe><br>
+        <br><iframe src="https://www.amazon.com" height="500px" width="500px"></iframe>
+
+        <br>
+
+       
+        <!-- div is non-semantic: as it can take any sort of element and has no specific meaning to it -->
+
+<h2>Section: </h2>
+        <section>
+            <h2 id="poem-section1">Poem 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam delectus aliquid nobis deserunt, corrupti
+                voluptatum fugit quam, obcaecati sit, velit dolorem voluptas illo nihil et?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam molestias impedit laborum libero illo
+                adipisci illum corrupti ut, ullam assumenda vel sit? Eaque, blanditiis labore.
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h2 id="poem-section2">Poem 2</h2>
+            <p>Lorem ipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi animi error ullam sint illum
+                velit necessitatibus, dolore in perspiciatis alias, magni, numquam ea optio inventore!dolor sit amet
+                consectetur adipisicing elit. Totam delectus aliquid nobis deserunt, corrupti voluptatum fugit quam,
+                obcaecati sit, velit dolorem voluptas illo nihil et?</p>
+        </section>
+        <hr>
+        <section>
+            <h2 id="poem-section3">Poem 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam delectus aliquid nobis deserunt, corrupti
+                voluptatum fugit quam, obcaecati sit, velit dolorem voluptas illo nihil et?</p>
+        </section>
+        <hr>
+        <hr>
+        <br>
+
+        <h2>Lists: </h2>
+        <ol start="11" type="i">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ol>
+        <hr>
+        <ul type="square">
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+
+        <hr>
+        <h2> Description list: </h2>
+        <dl type="square">
+            <dt>item1</dt>
+            <dd>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, consectetur!</dd>
+        </dl>
+
+        <hr>
+        <hr>
+        <h2> Table: </h2>
+        <table border="2">
+            <tr>
+                <th>Sr. no.</th>
+                <th>Name</th>
+                <th>Age</th>
+                <!-- also centre-aligns -->
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ajay</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Deepak</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Ajay</td>
+                <td>20</td>
+            </tr>
+        </table>
+        <br>
+
+        <table border="2" style="border-collapse:collapse;">
+            <caption> Table 3 </caption>
+            <tr>
+                <th>Sr. no.</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <!-- also centre-aligns -->
+            </tr>
+            <tr>
+                <td>1</td>
+                <td colspan="2">Ajay</td>
+                <td rowspan="2">20</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Deepak</td>
+                <td>22</td>
+            </tr>
+        </table>
+<br><hr><br>
+<h2>Form:</h2>
+        <form action="./home.html" method>
+            <label>Name: </label><br>
+            <input type="text" name="username" placeholder="Enter your name" disabled><br><br>
+
+            <label>Age: </label><br>
+            <input type="number" name="userpage" placeholder="Enter your Age" value="19"><br><br>
+
+            <label>Password: </label><br>
+            <input type="password" name="userpass" placeholder="Enter your password"><br><br>
+
+            <label>Email: </label><br>
+            <input type="email" name="email" placeholder="Enter your email" autocomplete="off"><br><br>
+
+            <label>Hobbies: </label><br>
+            <input type="checkbox" id="Cricket" name="userHobbies" value="Cricket"><label for="Cricket">Cricket </label> <br>
+            <input type="checkbox" id="Chess" name="userHobbies" value="Chess" checked><label for="Chess">Chess </label><br>
+            <input type="checkbox" id="Development" name="userHobbies" value="Development"><label for="Development">Development </label><br><br>
+
+            <label>Gender: </label><br>
+            <input type="radio" id="Male" name="userHobbies" value="Male"><label for="Male">Male </label> <br>
+            <input type="radio" id="Female" name="userHobbies" value="Female" checked><label for="Female">Female </label><br>
+           
+            <textarea placeholder="Feedback" ></textarea><br>
+            <label for="usercity">City:  </label><br>
+            <select id="usercity" name="city" >
+                <option >
+                    Ghaziabad
+                </option>
+
+                <option selected>
+                    Delhi
+                </option>
+
+                <option>
+                    Mumbai                    
+                </option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit the damn form"><br><br>
+            <button type="reset" >Reset</button><br><br>
+            <hr>
+            <h2>Video: </h2>
+             <video src="./sample-video.mp4" autoplay="true" height="200px" width="500px" muted="true"></video>
+           <br><hr>
+           <br>
+           <a href="mailto:xyz@abc.com">dontemailme@gmail.com</a>
+           <br>
+           <a href="tel:123456789">9654548588</a>
+
+           <br>
+ 
+           <bdo dir="rtl">hey</bdo>
+           <br>
+           CO<sub>2</sub>
+           
+        </form>
+    </main>
+    <br>
+    <footer>Footer</footer>
+    <!-- semantic tags -->
+
+
+
+
+
+</body>
+
+</html>
