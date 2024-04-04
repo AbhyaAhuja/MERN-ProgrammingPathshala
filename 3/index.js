@@ -210,5 +210,5 @@ let xx=prompt("enter first name");
 console.log(xx);
 
 let px=prompt("enter the object's number(could be 12 or 2)");
-console.log(px)
-console.log(obj)
+console.log(px);
+console.log(obj[px]);
