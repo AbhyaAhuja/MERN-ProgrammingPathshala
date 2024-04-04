@@ -1,0 +1,274 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: beige;
+}
+
+.parent-3 {
+    position: relative;
+    height: 50px;
+    width: 100px;
+    left: 50%;
+    background-color: blue;
+    border: 2px solid black;
+
+}
+
+.bg {
+    height: 50px;
+    width: 100px;
+    background-color: rgb(181, 181, 255);
+    border: 2px solid black;
+}
+
+.parent-4 {
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    left: 10px;
+    background-color: blue;
+
+}
+
+.parent-5 {
+    position: fixed;
+    height: 50px;
+    width: 100px;
+    top: 0px;
+    background-color: purple;
+    border: 2px solid black;
+
+}
+
+.parent-6 {
+    position: inherit;
+    height: 50px;
+    width: 100px;
+    left: 50%;
+    background-color: blue;
+    border: 2px solid black;
+
+}
+
+.parent {
+    margin-top: 300px;
+    display: grid;
+    /* grid-template-columns:100px 200px; */
+    /* grid-template-columns:50px 100px 200px; */
+
+    /* grid-template-columns: repeat(3, 100px); */
+    /* same for rows. */
+
+    /* /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(255, 0, 191);
+    grid-gap: 4px;
+    grid-auto-rows: 50px;
+    /* for variable size of rows */
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+}
+
+.child {
+    background-color: rgb(200, 152, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: aquamarine;
+}
+
+.menu {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: lightpink;
+}
+
+.footer {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background-color: bisque;
+}
+
+.parent-1 {
+    display: grid;
+    grid-gap: 4px;
+    height: 200px;
+}
+
+.right {
+    background-color: lightcoral;
+}
+
+
+.parent-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(0, 0, 0);
+    grid-gap: 4px;
+    grid-auto-rows: 50px;
+    grid-auto-columns: 50px;
+}
+
+.one {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: aquamarine;
+}
+
+.two {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: red;
+}
+
+.three {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: yellow;
+}
+
+.four {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: aquamarine;
+}
+
+/* grid-template-columns:repeat(auto-fit, minmax(100px,1fr)) */
+
+.h1-blog {
+    position: sticky;
+    top: 1px;
+}
+
+.parent-7 {
+    margin: auto;
+    background-color: rgb(41, 41, 41);
+    color: white;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    transition-property: height, width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+@media(800px <=width <=1200px) {
+    .parent-7 {
+        background-color: blue;
+    }
+
+}
+
+@media(800px <=width <=1200px) {
+    .parent-7 {
+        width: 100px;
+        height: 100px;
+    }
+
+}
+
+/* FOR SCALING BUTTON */
+/* __________________________________________________________________ */
+/* .btn {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    padding: 8px 16px;
+    border: none;
+    background-color: burlywood;
+    border-radius: 8px;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+
+}
+
+.btn:hover {
+    background-color: rgb(135, 39, 225);
+    scale: 2;
+    cursor: pointer;
+
+} */
+
+/* ___________________________________________________________________ */
+
+button {
+    scale: 2;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    animation-name: button-animation-type-1;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-duration:4s;
+animation-direction: alternate;
+/* goes aage, comes back vahi se */
+}
+
+@keyframes button-animation-type-1{
+    /* from{
+        top:20px;
+        left:40px;
+    }
+
+    to{
+        top:400px;
+        left:500px;
+    } */
+
+    /* or */
+
+    0%{
+        top:20px;
+        left:40px;
+    }
+
+    30%{
+        top:20px;
+        left:500px;
+    }
+
+    60%{
+        top:400px;
+        left:500px;
+    }
+
+    100%{
+        top:400px;
+        left:40px;
+    }
+}
+
+.logo{
+    width:50px;
+    border-bottom:1px solid red;
+    padding:16px;
+
+}
+
+.navbar{
+    background-color: red;
+    padding:16px;
+    width:calc(100% - 50px);
+/* space is a must here!! */
+}
+
+.parent-9{
+width:100%;
+display:flex;
+}
