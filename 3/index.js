@@ -28,7 +28,7 @@ console.log(arr)
 arr[0]='abcd'
 console.log(arr)
 // ________________________________________________
-// TYPE-CO
+// TYPE-COERCION
 let str='12'
 let agee=20
 let ans=agee+str;
