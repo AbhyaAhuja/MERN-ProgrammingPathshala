@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Hnadling</title>
+</head>
+<body>
+    <div>
+        <form onsubmit="submitForm(event)">
+            <label>First Name:</label><br>
+            <!-- <input type="text" name="firstName" placeholder="first name" onchange="firstNameChange(event)"><br> -->
+            <input type="text" name="firstName" placeholder="First Name" onkeydown="firstNameChange(event)"><br>
+
+            <label>Last Name:</label><br>
+            <input type="text" name="lastName" placeholder="Last Name"><br>
+            <label>Age:</label><br>
+            <input type="number" name="age" placeholder="Age"><br>
+            <label>Hobbies:</label><br>
+            <input type="checkbox" name="Hobbies" value="webd">Web D<br>
+            <input type="checkbox" name="Hobbies" value="chess">Chess<br>
+            <input type="checkbox" name="Hobbies" value="singing">Singing<br>
+            <br>
+            <button>Submit</button>
+        </form>
+    </div>
+    <script src="./form.js"></script>
+</body>
+</html>
