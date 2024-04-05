@@ -10,7 +10,7 @@ console.log(age);
 
 // ____________________________________________
 
-// alert("sojao")
+// alert("Alert!")
 
 msg='without var'
 console.log(msg)
