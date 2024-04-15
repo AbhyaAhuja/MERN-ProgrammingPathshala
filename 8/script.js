@@ -6,9 +6,13 @@ const url = require('url');
 const data = fs.readFileSync('./Data.json', 'utf-8');
 const dataObj = JSON.parse(data).products;
 const cardTemplate = `
+<body style="display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+column-gap: 15px;
+row-gap: 5px; ">
 <div class='product-card' style="
     
-    display:inline-block;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.484); 
     margin:10px 20px;
     text-align:center;
     padding: 10px 20px;
