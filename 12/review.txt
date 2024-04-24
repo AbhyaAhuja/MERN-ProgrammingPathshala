@@ -1,0 +1,11 @@
+rating, desc, date, updated, title-of-prod, prod id
+
+name, email, photo- user schema
+
+rating avg 
+
+restriction on user - 1 review on a prod by 1 
+
+no order id yet
+
+key = isDeleted, initially true
