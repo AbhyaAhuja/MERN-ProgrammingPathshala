@@ -1,17 +1,33 @@
 const mongoose = require('mongoose');
 
 const productSchema = mongoose.Schema({
-    title: String,
-    price: Number
+    title: {
+        type: String,
+        unique: true,
+        required: true
+    },
+    price: {
+            type: Number,
+            required:true,
+    
+    },
+    description: String,
+    images:[String],
+    createdAt:{
+        type: Date,
+        default: new Date(),
+    }
 })
 
-const productModel = mongoose.model('Products',productSchema);
+const productModel = mongoose.model('Products', productSchema);
 
-const testProduct = new productModel({
-    title:'Titan Watch',
-    price: 1000,
-});
+// const testProduct = new productModel({
+//     title:'Casio Watch',
+//     price: 1000,
+// });
 
-testProduct.save().then((res)=>{
-    console.log(res);
-})
+// testProduct.save().then((res)=>{
+//     console.log(res);
+// })
+
+module.exports = productModel;
