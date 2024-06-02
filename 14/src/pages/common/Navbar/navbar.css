@@ -1,0 +1,25 @@
+.header-parent-container{
+    display:flex;
+    background-color:rgb(79, 79, 79);
+    align-items:center;
+    justify-content: space-between;
+    padding:8 16px;
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+.left{
+    
+    display:flex;
+    align-items:center;
+    gap:24px;
+
+}
+
+.right{
+   height:24px;
+   width:24px;
+   border-radius:50%;
+   background-color: burlywood;
+}

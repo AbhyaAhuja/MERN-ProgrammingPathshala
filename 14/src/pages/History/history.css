@@ -1,0 +1,17 @@
+.history-main-container{
+    font-size:30px;
+    color:white;
+}
+
+button{
+    background-color: rgb(194, 159, 94);
+    color:rgb(240, 240, 240);
+border-radius:29px;
+}
+div{
+    color:white;
+
+}
+input{
+    color:black;
+}
