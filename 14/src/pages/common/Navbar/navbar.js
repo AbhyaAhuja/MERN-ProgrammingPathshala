@@ -23,6 +23,7 @@ const Navbar = (props) => {
         <Link to = '/contact'>Contact</Link>
         <Link to= '/help'>Help</Link>
         <Link to= '/signup'style = {customColor('signup')}>Signup</Link>
+        <Link to="/login" style={customColor('login')}>Login</Link>
             </div>
             <div className='right' style = {{color:'brown', padding:'4px'}}>
                 

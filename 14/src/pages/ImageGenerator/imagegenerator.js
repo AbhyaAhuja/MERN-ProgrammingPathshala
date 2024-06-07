@@ -69,38 +69,40 @@ import {useState} from "react";
 
 const ImageGenerator = (props) => {
     const {userPoints, setUserPoints} = props;
-
+//const cValue = useContext(PointsContext);
     const [searchText, setSearchText] = useState();
     const [imageSrc, setImgSrc] = useState("");
 
     const func = (e) => {
         setSearchText(e.target.value);
     }
-// __________imp_____________________// __________imp_____________________// __________imp_____________________// 
 
     const handleClick = async () => {
-        setUserPoints (userPoints-1);
+        // cValue.setUserPoints(cValue.userPoints-1);
+
+    if(!searchText) return
+
         try{
-        const res = await fetch(`${process.env.BACKEND_URL}/api/v1/images`, {
-            method: "POST",
-            body: JSON.stringify({
-                searchText: searchText,
-            }),
-            headers: {
-                "Content-Type": "application/json",
-            },
-        });
-        const data = await res.json();
-        if(data?.status === 'success'){
-            setImgSrc(data.data.imageUrl);
-        }
-    }catch(err){
-    console.log(err);
-}
-}
-// __________________imp_____________________// ____________________imp_____________________// __________________imp_____________________
-    return (
-        <div>
+            const res = await fetch(`${process.env.BACKEND_URL}/api/v1/images`, {
+                method: "POST",
+                body: JSON.stringify({//why?  
+                    searchText: searchText,
+                    }),
+                    headers: {
+                        "Content-Type": "application/json", "Authorization": "Bearer "+localStorage.getItem("authorization"),//why just here?
+                        },
+                        });
+                        const data = await res.json(); 
+                        if(data?.status === 'success'){ //status and imageurl
+                            setImgSrc(data.data.imageUrl); //this
+                        setUserPoints (userPoints-1);
+                            }
+                            }catch(err){
+                                console.log(err);
+                                }
+                                }
+                                return (
+                                    <div>
             <Navbar page="imageGenerator" userPoints={userPoints} setUserPoints={setUserPoints}/>
             <div className="image-generator-main-container">
                 <div className='image-search'>
