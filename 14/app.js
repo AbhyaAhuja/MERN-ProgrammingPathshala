@@ -8,7 +8,7 @@ import History from './src/pages/History/history.js'
 import NewHistory from './src/pages/History/newhistory.js'
 import HistoryInformationPage from './src/pages/History/HistoryInformationPage.js'
 // import PointsContext from './src/context/pointsContext.js';
-import PointsContext from './src\\context\\pointsContext.js'
+import PointsContext from './src/context/pointsContext.js'
 import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import Signup from "./src/pages/signup/signup.js";
 import Login from "./src/pages/login/login.js";
