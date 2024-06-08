@@ -1,3 +1,5 @@
+// require('dotenv').config();
+
 import PointsContext from "../../context/pointsContext";
 import Navbar from "../common/Navbar/navbar";
 import {useState, useContext} from "react";
@@ -28,9 +30,9 @@ const Login = () => {
     return (
         <div>
             <Navbar page='login'/>
-            <div>
-                <input onChange={(e)=>setEmail(e.target.value)}/>
-                <input onChange={(e)=>setPassword(e.target.value)}/>
+            <div style={{"margin": "50%"}}>
+                <input onChange={(e)=>setEmail(e.target.value)}/><br/>
+                <input onChange={(e)=>setPassword(e.target.value)}/><br/><br/>
                 <button onClick={handleClick}>Login</button>
             </div>
         </div>

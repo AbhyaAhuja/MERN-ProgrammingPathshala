@@ -81,20 +81,21 @@ const ImageGenerator = (props) => {
         // cValue.setUserPoints(cValue.userPoints-1);
 
     if(!searchText) return
-
-        try{
-            const res = await fetch(`${process.env.BACKEND_URL}/api/v1/images`, {
-                method: "POST",
-                body: JSON.stringify({//why?  
-                    searchText: searchText,
-                    }),
-                    headers: {
-                        "Content-Type": "application/json", "Authorization": "Bearer "+localStorage.getItem("authorization"),//why just here?
-                        },
-                        });
-                        const data = await res.json(); 
-                        if(data?.status === 'success'){ //status and imageurl
-                            setImgSrc(data.data.imageUrl); //this
+    
+    try{
+        const res = await fetch(`${process.env.BACKEND_URL}/api/v1/images`, {
+            method: "POST",
+            body: JSON.stringify({//why?  
+                searchText: searchText,
+                }),
+                headers: {
+                    "Content-Type": "application/json", "Authorization": "Bearer "+localStorage.getItem("authorization"),//why just here?
+                    },
+                    });
+                    const data = await res.json(); 
+                    if(data?.status === 'success'){ //status and imageurl
+                        setImgSrc(data.data.imageUrl); //this
+                        console.log(imageSrc);
                         setUserPoints (userPoints-1);
                             }
                             }catch(err){
