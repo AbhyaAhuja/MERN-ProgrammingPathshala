@@ -64,7 +64,7 @@
 
 import Navbar from "../common/Navbar/navbar";
 import PointsContext from "../../context/pointsContext";
-import "./imageGenerator.css"
+import "./imagegenerator.css"
 import {useState} from "react";
 
 const ImageGenerator = (props) => {
