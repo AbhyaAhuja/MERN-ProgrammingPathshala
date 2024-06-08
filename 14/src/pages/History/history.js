@@ -55,12 +55,12 @@ const History= (props)=>{
 
 return(<div><Navbar page = "history" userPoints={userPoints} setUserPoints={setUserPoints}/>
 <br/><br/>
-<button onClick={changeTitle}>Change title</button><br/>
+<button onClick={changeTitle}>Change title</button><br/><br/>
 <button onClick={()=>{
     changeDescription();
     changeTitle();
-}}>change title and desc</button><br/>
-<button onClick={changeDescription}>chnge desc</button><br/><br/>
+}}>change title and desc</button><br/><br/>
+<button onClick={changeDescription}>chnge desc</button><br/><br/><br/>
 
 <input value={title} onChange = {(e)=>{
     setTitle(e.target.value);

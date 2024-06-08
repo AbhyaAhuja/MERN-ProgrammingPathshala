@@ -21,7 +21,7 @@ const App = ()=>{
     const [userPoints, setUserPoints]=useState(20);
     const [isLoggedIn, setIsLoggedIn] = useState(()=>{
         if(localStorage.getItem('authorization')){
-            // Data stored in localStorage persists across browser sessions, so the user remains logged in even if they close and reopen the browser.
+            // Data stored in localStorage persists across BROWSER SESSIONS, so the user remains logged in even if they close and reopen the browser.
             return true;
         }
         else return false;
