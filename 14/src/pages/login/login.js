@@ -30,7 +30,7 @@ const Login = () => {
     return (
         <div>
             <Navbar page='login'/>
-            <div style={{"margin": "50%"}}>
+            <div style={{"margin-left": "50%"}}>
                 <input onChange={(e)=>setEmail(e.target.value)}/><br/>
                 <input onChange={(e)=>setPassword(e.target.value)}/><br/><br/>
                 <button onClick={handleClick}>Login</button>

@@ -65,11 +65,11 @@
 import Navbar from "../common/Navbar/navbar";
 import PointsContext from "../../context/pointsContext";
 import "./imagegenerator.css"
-import {useState} from "react";
+import {useState, useContext} from "react";
 
 const ImageGenerator = (props) => {
     const {userPoints, setUserPoints} = props;
-//const cValue = useContext(PointsContext);
+const cValue = useContext(PointsContext);
     const [searchText, setSearchText] = useState();
     const [imageSrc, setImgSrc] = useState("");
 
@@ -78,7 +78,7 @@ const ImageGenerator = (props) => {
     }
 
     const handleClick = async () => {
-        // cValue.setUserPoints(cValue.userPoints-1);
+        cValue.setUserPoints(cValue.userPoints-1);
 
     if(!searchText) return
     
@@ -95,8 +95,8 @@ const ImageGenerator = (props) => {
                     const data = await res.json(); 
                     if(data?.status === 'success'){ //status and imageurl
                         setImgSrc(data.data.imageUrl); //this
-                        console.log(imageSrc);
-                        setUserPoints (userPoints-1);
+                        // console.log(imageSrc);
+                        // setUserPoints (userPoints-1);
                             }
                             }catch(err){
                                 console.log(err);
@@ -107,7 +107,7 @@ const ImageGenerator = (props) => {
             <Navbar page="imageGenerator" userPoints={userPoints} setUserPoints={setUserPoints}/>
             <div className="image-generator-main-container">
                 <div className='image-search'>
-                    <img src={imageSrc} /><br/><br/>
+                    <img src={imageSrc} style = {{width:300,height:400}}/><br/><br/>
                     <input onChange={(e)=>{func(e)}}/><br/><br/>
                     <button onClick={handleClick}>Generate</button>
                 </div>
