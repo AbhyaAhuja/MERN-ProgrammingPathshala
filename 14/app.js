@@ -5,9 +5,6 @@ import "./globalstyles.css";
 import HomePage from './src/pages/HomePage/homepage.js';
 import ImageGenerator from './src/pages/ImageGenerator/imagegenerator.js';
 import History from './src/pages/History/history.js'
-import NewHistory from './src/pages/History/newhistory.js'
-import HistoryInformationPage from './src/pages/History/HistoryInformationPage.js'
-// import PointsContext from './src/context/pointsContext.js';
 import PointsContext from './src/context/pointsContext.js'
 import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 import Signup from "./src/pages/signup/signup.js";
@@ -49,14 +46,7 @@ const App = ()=>{
             element:<History userPoints={userPoints} setUserPoints={setUserPoints}/>
     
         }
-        ,{
-            path:"/newhistory",
-            element:<NewHistory userPoints={userPoints} setUserPoints={setUserPoints}/>
-        },
-        {
-            path:"/newhistory/:historyId", // beacuse of this we used params.historyId
-            element:<HistoryInformationPage userPoints={userPoints} setUserPoints={setUserPoints}/>
-        },
+        ,
         {
             path:"/signup",
             element: <Signup/>

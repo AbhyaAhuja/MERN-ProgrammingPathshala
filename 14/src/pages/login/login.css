@@ -1,0 +1,25 @@
+.mid{
+    display:flex;
+   flex-direction:column;
+   justify-content: center;
+   align-items:center;
+   padding-top:90px;
+
+}
+
+
+h2{
+    margin-top:55px;
+}
+.mid2{
+    
+    /* background-color: rgb(117, 118, 119); */
+    text-align:center;
+    border: 1px solid #4a4a4a;
+    border-radius: 8px;
+    padding: 20px 50px;
+    box-shadow: 2px 2px 25px rgba(255, 255, 255, 0.453);
+    height:350px;
+    flex-wrap: wrap;
+    align-items:center;
+}

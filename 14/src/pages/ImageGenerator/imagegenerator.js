@@ -72,7 +72,8 @@ const ImageGenerator = (props) => {
 const cValue = useContext(PointsContext);
     const [searchText, setSearchText] = useState();
     const [imageSrc, setImgSrc] = useState("");
-
+    const user = JSON.parse(localStorage.getItem("user"));
+    const userId = user._id;
     const func = (e) => {
         setSearchText(e.target.value);
     }
@@ -80,34 +81,35 @@ const cValue = useContext(PointsContext);
     const handleClick = async () => {
         cValue.setUserPoints(cValue.userPoints-1);
 
-    if(!searchText) return
+    if(!searchText) return;
     
-    try{
+    try {
         const res = await fetch(`${process.env.BACKEND_URL}/api/v1/images`, {
-            method: "POST",
-            body: JSON.stringify({//why?  
-                searchText: searchText,
-                }),
-                headers: {
-                    "Content-Type": "application/json", "Authorization": "Bearer "+localStorage.getItem("authorization"),//why just here?
-                    },
-                    });
-                    const data = await res.json(); 
-                    if(data?.status === 'success'){ //status and imageurl
-                        setImgSrc(data.data.imageUrl); //this
-                        // console.log(imageSrc);
-                        // setUserPoints (userPoints-1);
-                            }
-                            }catch(err){
-                                console.log(err);
-                                }
-                                }
+          method: "POST",
+          body: JSON.stringify({
+            searchText: searchText,
+            userId
+          }),
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        });
+        const data = await res.json();
+        if (data?.status === "success") {
+          setImgSrc(data.data.imageUrl);
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    };
                                 return (
                                     <div>
             <Navbar page="imageGenerator" userPoints={userPoints} setUserPoints={setUserPoints}/>
             <div className="image-generator-main-container">
                 <div className='image-search'>
-                    <img src={imageSrc} style = {{width:300,height:400}}/><br/><br/>
+                    <br/>
+                    <img className="imageidk" src={imageSrc} /><br/><br/>
                     <input onChange={(e)=>{func(e)}}/><br/><br/>
                     <button onClick={handleClick}>Generate</button>
                 </div>

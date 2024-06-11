@@ -19,9 +19,6 @@ const Navbar = (props) => {
         <Link to = '/' style = {customColor('home')}>Home</Link>
         <Link to = '/image-generator' style = {customColor('imageGenerator')}>Image Generator</Link>
         <Link to = '/history' style = {customColor('history')}>History</Link>
-        <Link to = '/newhistory'>New-history</Link>
-        <Link to = '/contact'>Contact</Link>
-        <Link to= '/help'>Help</Link>
         <Link to= '/signup'style = {customColor('signup')}>Signup</Link>
         <Link to="/login" style={customColor('login')}>Login</Link>
             </div>
